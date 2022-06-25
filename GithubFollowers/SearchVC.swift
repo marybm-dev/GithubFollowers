@@ -13,17 +13,35 @@ class SearchVC: UIViewController {
   let usernameTextField = GFTextField()
   let ctaButton = GFButton(backgroundColor: .systemGreen, title: "Get Followers")
 
+  var isUsernameEntered: Bool { return !usernameTextField.text!.isEmpty }
+
   override func viewDidLoad() {
     super.viewDidLoad()
     view.backgroundColor = .systemBackground
     configureLogoView()
     configureTextField()
     configureCTAButton()
+    createDismissKeyboardTapGesture()
   }
 
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     navigationController?.isNavigationBarHidden = true
+  }
+
+  func createDismissKeyboardTapGesture() {
+    let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
+    view.addGestureRecognizer(tap)
+  }
+
+  @objc func pushFollowerListVC() {
+    guard isUsernameEntered else {
+      return
+    }
+    let followerListVC = FollowerListVC()
+    followerListVC.username = usernameTextField.text
+    followerListVC.title = usernameTextField.text
+    navigationController?.pushViewController(followerListVC, animated: true)
   }
 
   func configureLogoView() {
@@ -41,6 +59,7 @@ class SearchVC: UIViewController {
 
   func configureTextField() {
     view.addSubview(usernameTextField)
+    usernameTextField.delegate = self
 
     NSLayoutConstraint.activate([
       usernameTextField.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: 48),
@@ -52,6 +71,7 @@ class SearchVC: UIViewController {
 
   func configureCTAButton() {
     view.addSubview(ctaButton)
+    ctaButton.addTarget(self, action: #selector(pushFollowerListVC), for: .touchUpInside)
 
     NSLayoutConstraint.activate([
       ctaButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -50),
@@ -59,5 +79,11 @@ class SearchVC: UIViewController {
       ctaButton.trailingAnchor.constraint(equalTo: usernameTextField.trailingAnchor),
       ctaButton.heightAnchor.constraint(equalToConstant: 50)
     ])
+  }
+}
+
+extension SearchVC: UITextFieldDelegate {
+  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    return true
   }
 }
