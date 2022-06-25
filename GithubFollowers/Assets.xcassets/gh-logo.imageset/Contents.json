@@ -1,6 +1,7 @@
 {
   "images" : [
     {
+      "filename" : "gh-logo.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -11,6 +12,7 @@
           "value" : "dark"
         }
       ],
+      "filename" : "gh-logo-dark.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
