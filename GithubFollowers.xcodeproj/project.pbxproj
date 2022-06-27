@@ -24,6 +24,8 @@
 		44DEB13928692F8400BB9F5E /* GFBodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DEB13828692F8400BB9F5E /* GFBodyLabel.swift */; };
 		44DEB13B2869303B00BB9F5E /* GFAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DEB13A2869303B00BB9F5E /* GFAlertVC.swift */; };
 		44DEB13D2869361200BB9F5E /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DEB13C2869361200BB9F5E /* UIViewController+Ext.swift */; };
+		44DEB144286A769800BB9F5E /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DEB143286A769800BB9F5E /* Follower.swift */; };
+		44DEB146286A775800BB9F5E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DEB145286A775800BB9F5E /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		44DEB13828692F8400BB9F5E /* GFBodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFBodyLabel.swift; sourceTree = "<group>"; };
 		44DEB13A2869303B00BB9F5E /* GFAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAlertVC.swift; sourceTree = "<group>"; };
 		44DEB13C2869361200BB9F5E /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
+		44DEB143286A769800BB9F5E /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
+		44DEB145286A775800BB9F5E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,7 @@
 		44DEB0F82865555800BB9F5E /* GithubFollowers */ = {
 			isa = PBXGroup;
 			children = (
+				44DEB142286A768400BB9F5E /* Model */,
 				44DEB0F92865555800BB9F5E /* AppDelegate.swift */,
 				44DEB0FB2865555800BB9F5E /* SceneDelegate.swift */,
 				44DEB1412869398F00BB9F5E /* Resources */,
@@ -181,6 +186,15 @@
 				44DEB1072865555A00BB9F5E /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		44DEB142286A768400BB9F5E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				44DEB143286A769800BB9F5E /* Follower.swift */,
+				44DEB145286A775800BB9F5E /* User.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,7 +333,9 @@
 				44DEB12E28668EC200BB9F5E /* GFButton.swift in Sources */,
 				44DEB0FA2865555800BB9F5E /* AppDelegate.swift in Sources */,
 				44DEB13328669ED700BB9F5E /* FollowerListVC.swift in Sources */,
+				44DEB146286A775800BB9F5E /* User.swift in Sources */,
 				44DEB13B2869303B00BB9F5E /* GFAlertVC.swift in Sources */,
+				44DEB144286A769800BB9F5E /* Follower.swift in Sources */,
 				44DEB0FC2865555800BB9F5E /* SceneDelegate.swift in Sources */,
 				44DEB13728692E1D00BB9F5E /* GFTitleLabel.swift in Sources */,
 				44DEB1352866A27900BB9F5E /* String+Ext.swift in Sources */,
