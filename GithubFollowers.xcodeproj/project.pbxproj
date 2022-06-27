@@ -117,19 +117,10 @@
 			children = (
 				44DEB0F92865555800BB9F5E /* AppDelegate.swift */,
 				44DEB0FB2865555800BB9F5E /* SceneDelegate.swift */,
-				44DEB12B2866887200BB9F5E /* FavoritesListVC.swift */,
-				44DEB13228669ED700BB9F5E /* FollowerListVC.swift */,
-				44DEB1292866884C00BB9F5E /* SearchVC.swift */,
-				44DEB12D28668EC200BB9F5E /* GFButton.swift */,
-				44DEB12F2866926500BB9F5E /* GFTextField.swift */,
-				44DEB13628692E1D00BB9F5E /* GFTitleLabel.swift */,
-				44DEB13828692F8400BB9F5E /* GFBodyLabel.swift */,
-				44DEB13A2869303B00BB9F5E /* GFAlertVC.swift */,
-				44DEB1342866A27900BB9F5E /* String+Ext.swift */,
-				44DEB13C2869361200BB9F5E /* UIViewController+Ext.swift */,
-				44DEB1022865555A00BB9F5E /* Assets.xcassets */,
-				44DEB1042865555A00BB9F5E /* LaunchScreen.storyboard */,
-				44DEB1072865555A00BB9F5E /* Info.plist */,
+				44DEB1412869398F00BB9F5E /* Resources */,
+				44DEB1402869392200BB9F5E /* Extensions */,
+				44DEB13F286938F500BB9F5E /* Components */,
+				44DEB13E286938C100BB9F5E /* Screens */,
 			);
 			path = GithubFollowers;
 			sourceTree = "<group>";
@@ -149,6 +140,47 @@
 				44DEB11C2865555B00BB9F5E /* GithubFollowersUITestsLaunchTests.swift */,
 			);
 			path = GithubFollowersUITests;
+			sourceTree = "<group>";
+		};
+		44DEB13E286938C100BB9F5E /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				44DEB12B2866887200BB9F5E /* FavoritesListVC.swift */,
+				44DEB13228669ED700BB9F5E /* FollowerListVC.swift */,
+				44DEB1292866884C00BB9F5E /* SearchVC.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		44DEB13F286938F500BB9F5E /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				44DEB12D28668EC200BB9F5E /* GFButton.swift */,
+				44DEB12F2866926500BB9F5E /* GFTextField.swift */,
+				44DEB13628692E1D00BB9F5E /* GFTitleLabel.swift */,
+				44DEB13828692F8400BB9F5E /* GFBodyLabel.swift */,
+				44DEB13A2869303B00BB9F5E /* GFAlertVC.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		44DEB1402869392200BB9F5E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				44DEB1342866A27900BB9F5E /* String+Ext.swift */,
+				44DEB13C2869361200BB9F5E /* UIViewController+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		44DEB1412869398F00BB9F5E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				44DEB1022865555A00BB9F5E /* Assets.xcassets */,
+				44DEB1042865555A00BB9F5E /* LaunchScreen.storyboard */,
+				44DEB1072865555A00BB9F5E /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
