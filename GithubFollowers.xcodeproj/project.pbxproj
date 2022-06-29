@@ -30,6 +30,7 @@
 		44DEB14C286A84F000BB9F5E /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DEB14B286A84F000BB9F5E /* ErrorMessage.swift */; };
 		44DEB14F286A8B6B00BB9F5E /* FollowerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DEB14E286A8B6B00BB9F5E /* FollowerCell.swift */; };
 		44DEB151286A8BDC00BB9F5E /* GFAvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DEB150286A8BDC00BB9F5E /* GFAvatarImageView.swift */; };
+		44DEB153286BD77200BB9F5E /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DEB152286BD77200BB9F5E /* UIHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		44DEB14B286A84F000BB9F5E /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
 		44DEB14E286A8B6B00BB9F5E /* FollowerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerCell.swift; sourceTree = "<group>"; };
 		44DEB150286A8BDC00BB9F5E /* GFAvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAvatarImageView.swift; sourceTree = "<group>"; };
+		44DEB152286BD77200BB9F5E /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				44DEB14B286A84F000BB9F5E /* ErrorMessage.swift */,
+				44DEB152286BD77200BB9F5E /* UIHelper.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 				44DEB13728692E1D00BB9F5E /* GFTitleLabel.swift in Sources */,
 				44DEB1352866A27900BB9F5E /* String+Ext.swift in Sources */,
 				44DEB14C286A84F000BB9F5E /* ErrorMessage.swift in Sources */,
+				44DEB153286BD77200BB9F5E /* UIHelper.swift in Sources */,
 				44DEB149286A7B5600BB9F5E /* NetworkManager.swift in Sources */,
 				44DEB12A2866884C00BB9F5E /* SearchVC.swift in Sources */,
 				44DEB13928692F8400BB9F5E /* GFBodyLabel.swift in Sources */,
