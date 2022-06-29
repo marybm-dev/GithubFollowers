@@ -132,11 +132,11 @@
 				44DEB0F92865555800BB9F5E /* AppDelegate.swift */,
 				44DEB0FB2865555800BB9F5E /* SceneDelegate.swift */,
 				44DEB1072865555A00BB9F5E /* Info.plist */,
+				44DEB1412869398F00BB9F5E /* Support */,
 				44DEB1402869392200BB9F5E /* Extensions */,
 				44DEB13F286938F500BB9F5E /* Views */,
 				44DEB147286A7B4500BB9F5E /* Managers */,
 				44DEB142286A768400BB9F5E /* Model */,
-				44DEB1412869398F00BB9F5E /* Resources */,
 				44DEB13E286938C100BB9F5E /* Screens */,
 				44DEB14A286A84E000BB9F5E /* Utilities */,
 			);
@@ -193,13 +193,13 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		44DEB1412869398F00BB9F5E /* Resources */ = {
+		44DEB1412869398F00BB9F5E /* Support */ = {
 			isa = PBXGroup;
 			children = (
 				44DEB1022865555A00BB9F5E /* Assets.xcassets */,
 				44DEB1042865555A00BB9F5E /* LaunchScreen.storyboard */,
 			);
-			path = Resources;
+			path = Support;
 			sourceTree = "<group>";
 		};
 		44DEB142286A768400BB9F5E /* Model */ = {
