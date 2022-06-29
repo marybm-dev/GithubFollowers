@@ -13,7 +13,7 @@ class GFAvatarImageView: UIImageView {
 
   override init(frame: CGRect) {
     super.init(frame: .zero)
-
+    configure()
   }
 
   required init?(coder: NSCoder) {
