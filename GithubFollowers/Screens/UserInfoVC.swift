@@ -35,7 +35,7 @@ class UserInfoVC: UIViewController {
       switch result {
       case .success(let user):
         DispatchQueue.main.async {
-          self.add(childVC: UserInfoHeaderVC(user: user), to: self.headerView)
+          self.add(childVC: GFUserInfoHeaderVC(user: user), to: self.headerView)
         }
 
       case .failure(let error):
