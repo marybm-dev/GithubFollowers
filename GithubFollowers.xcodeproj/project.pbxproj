@@ -13,6 +13,7 @@
 		44027F62287521E2005990D4 /* GFRepoItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44027F61287521E2005990D4 /* GFRepoItemVC.swift */; };
 		44027F64287523C9005990D4 /* GFFollowerItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44027F63287523C9005990D4 /* GFFollowerItemVC.swift */; };
 		44027F67287648E8005990D4 /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44027F66287648E8005990D4 /* Date+Ext.swift */; };
+		44027F6928765CA6005990D4 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44027F6828765CA6005990D4 /* PersistenceManager.swift */; };
 		44B6926D286D2B31007D94DA /* GFEmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B6926C286D2B31007D94DA /* GFEmptyStateView.swift */; };
 		44B6926F286E63C3007D94DA /* UserInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B6926E286E63C3007D94DA /* UserInfoVC.swift */; };
 		44B69271287361E3007D94DA /* GFUserInfoHeaderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B69270287361E3007D94DA /* GFUserInfoHeaderVC.swift */; };
@@ -66,6 +67,7 @@
 		44027F61287521E2005990D4 /* GFRepoItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFRepoItemVC.swift; sourceTree = "<group>"; };
 		44027F63287523C9005990D4 /* GFFollowerItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFFollowerItemVC.swift; sourceTree = "<group>"; };
 		44027F66287648E8005990D4 /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
+		44027F6828765CA6005990D4 /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
 		44B6926C286D2B31007D94DA /* GFEmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFEmptyStateView.swift; sourceTree = "<group>"; };
 		44B6926E286E63C3007D94DA /* UserInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoVC.swift; sourceTree = "<group>"; };
 		44B69270287361E3007D94DA /* GFUserInfoHeaderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFUserInfoHeaderVC.swift; sourceTree = "<group>"; };
@@ -274,6 +276,7 @@
 			isa = PBXGroup;
 			children = (
 				44DEB148286A7B5600BB9F5E /* NetworkManager.swift */,
+				44027F6828765CA6005990D4 /* PersistenceManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -447,6 +450,7 @@
 				44B69271287361E3007D94DA /* GFUserInfoHeaderVC.swift in Sources */,
 				44027F64287523C9005990D4 /* GFFollowerItemVC.swift in Sources */,
 				44DEB14C286A84F000BB9F5E /* GFError.swift in Sources */,
+				44027F6928765CA6005990D4 /* PersistenceManager.swift in Sources */,
 				44027F67287648E8005990D4 /* Date+Ext.swift in Sources */,
 				44DEB149286A7B5600BB9F5E /* NetworkManager.swift in Sources */,
 				44DEB12A2866884C00BB9F5E /* SearchVC.swift in Sources */,
