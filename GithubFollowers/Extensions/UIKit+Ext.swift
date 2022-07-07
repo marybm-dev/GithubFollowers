@@ -6,8 +6,15 @@
 //
 
 import UIKit
+import SafariServices
 
 fileprivate var containerView: UIView!
+
+extension UIView {
+
+  static var shouldAnimate: Bool { !UIAccessibility.isReduceMotionEnabled }
+
+}
 
 extension UIViewController {
 
@@ -18,6 +25,12 @@ extension UIViewController {
       alertVC.modalTransitionStyle = .crossDissolve
       self.present(alertVC, animated: true)
     }
+  }
+
+  func presentSafariVC(with url: URL) {
+    let safariVC = SFSafariViewController(url: url)
+    safariVC.preferredControlTintColor = .systemGreen
+    present(safariVC, animated: UIView.shouldAnimate)
   }
 
   func showLoadingView() {

@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol FollowerListVCDelegate: AnyObject {
+  func didRequestFollwers(for username: String)
+}
+
 class FollowerListVC: UIViewController {
   enum Section { case main }
 
@@ -24,7 +28,7 @@ class FollowerListVC: UIViewController {
     super.viewDidLoad()
     configureViewController()
     configureCollectionView()
-    getFollowers()
+    getFollowers(for: username, page: page)
     configureDataSource()
     configureSearchController()
   }
@@ -55,7 +59,7 @@ class FollowerListVC: UIViewController {
     navigationItem.searchController = searchController
   }
 
-  func getFollowers() {
+  func getFollowers(for username: String, page: Int) {
     showLoadingView()
     NetworkManager.shared.getFollowers(for: username, page: page) { [weak self] result in
       guard let self = self else { return }
@@ -93,7 +97,7 @@ class FollowerListVC: UIViewController {
     snapshot.appendSections([.main])
     snapshot.appendItems(followers)
     DispatchQueue.main.async {
-      self.dataSource.apply(snapshot, animatingDifferences: UIHelper.shouldAnimate)
+      self.dataSource.apply(snapshot, animatingDifferences: UIView.shouldAnimate)
     }
   }
 }
@@ -109,7 +113,7 @@ extension FollowerListVC: UICollectionViewDelegate {
     if offsetY > contentHeight - height {
       guard hasMoreFollowers else { return }
       page += 1
-      getFollowers()
+      getFollowers(for: username, page: page)
     }
   }
 
@@ -119,8 +123,9 @@ extension FollowerListVC: UICollectionViewDelegate {
 
     let destinationVC = UserInfoVC()
     destinationVC.username = follower.login
+    destinationVC.delegate = self
     let navController = UINavigationController(rootViewController: destinationVC)
-    present(navController, animated: UIHelper.shouldAnimate)
+    present(navController, animated: UIView.shouldAnimate)
   }
 }
 
@@ -137,4 +142,17 @@ extension FollowerListVC: UISearchResultsUpdating, UISearchBarDelegate {
     isSearching = false
     updateData(on: followers)
   }
+}
+
+extension FollowerListVC: FollowerListVCDelegate {
+
+  func didRequestFollwers(for username: String) {
+    self.username = username
+    title = username
+    page = 1
+    followers.removeAll()
+    filteredFollowers.removeAll()
+    getFollowers(for: username, page: page)
+  }
+
 }
