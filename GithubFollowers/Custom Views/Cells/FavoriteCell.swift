@@ -26,7 +26,7 @@ class FavoriteCell: UITableViewCell {
     addSubview(avatarImageView)
     addSubview(usernameLabel)
 
-    accessoryType = .checkmark // .disclosureIndicator
+    accessoryType = .disclosureIndicator
     let padding: CGFloat = 12
 
     NSLayoutConstraint.activate([
