@@ -33,7 +33,7 @@ extension UIViewController {
 
 extension UICollectionViewFlowLayout {
 
-  static func threeColumns(in view: UIView) -> UICollectionViewFlowLayout {
+  static func makeThreeColumnLayout(in view: UIView) -> UICollectionViewFlowLayout {
     let width = view.bounds.width
     let padding: CGFloat = 12
     let minimumItemSpacing: CGFloat = 10
