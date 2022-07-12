@@ -10,6 +10,10 @@ import SafariServices
 
 extension UIView {
   static var shouldAnimate: Bool { !UIAccessibility.isReduceMotionEnabled }
+  
+  func addSubviews(_ views: UIView...) {
+    views.forEach { addSubview($0) }
+  }
 }
 
 extension UIViewController {
