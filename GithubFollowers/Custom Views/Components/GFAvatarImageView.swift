@@ -27,4 +27,11 @@ class GFAvatarImageView: UIImageView {
     image = placeholderImage
     translatesAutoresizingMaskIntoConstraints = false
   }
+
+  func downloadImage(fromURL urlString: String) {
+    NetworkManager.shared.downloadImage(from: urlString) { [weak self] image in
+      guard let self = self else { return }
+      DispatchQueue.main.async { self.image = image }
+    }
+  }
 }

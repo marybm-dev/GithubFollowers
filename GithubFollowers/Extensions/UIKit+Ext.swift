@@ -9,6 +9,7 @@ import UIKit
 import SafariServices
 
 extension UIView {
+
   static var shouldAnimate: Bool { !UIAccessibility.isReduceMotionEnabled }
   
   func addSubviews(_ views: UIView...) {
@@ -42,7 +43,6 @@ extension UIViewController {
     safariVC.preferredControlTintColor = .systemGreen
     present(safariVC, animated: UIView.shouldAnimate)
   }
-
 }
 
 extension UICollectionViewFlowLayout {
