@@ -25,6 +25,7 @@ class GFDataLoadingVC: UIViewController {
 
     let activityIndicator = UIActivityIndicatorView(style: .large)
     containerView.addSubview(activityIndicator)
+    activityIndicator.accessibilityLabel = "Loading"
 
     activityIndicator.translatesAutoresizingMaskIntoConstraints = false
     NSLayoutConstraint.activate([
