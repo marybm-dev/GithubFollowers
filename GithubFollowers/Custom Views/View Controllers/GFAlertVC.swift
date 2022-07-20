@@ -20,6 +20,8 @@ class GFAlertVC: UIViewController {
 
   let padding: CGFloat = 20
 
+  var a11yLabelsElement: UIAccessibilityElement?
+
   init(title: String, message: String, buttonTitle: String) {
     super.init(nibName: nil, bundle: nil)
     self.alertTitle = title
@@ -35,10 +37,23 @@ class GFAlertVC: UIViewController {
     super.viewDidLoad()
     view.backgroundColor = UIColor.black.withAlphaComponent(0.75)
 
+    configureA11y()
     configureContainerView()
     configureTitleLabel()
     configureButton()
     configureMessageLabel()
+  }
+
+  override func viewDidLayoutSubviews() {
+    super.viewDidLayoutSubviews()
+    a11yLabelsElement?.accessibilityLabel = [titleLabel.text, messageLabel.text].compactMap{$0}.joined(separator: ",")
+    a11yLabelsElement?.accessibilityFrameInContainerSpace = titleLabel.frame.union(messageLabel.frame)
+  }
+
+  func configureA11y() {
+    let labelsElement = UIAccessibilityElement(accessibilityContainer: self)
+    a11yLabelsElement = labelsElement
+    containerView.accessibilityElements = [labelsElement, ctaButton]
   }
 
   func configureContainerView() {

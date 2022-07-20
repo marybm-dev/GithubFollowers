@@ -23,11 +23,13 @@ class FollowerCell: UICollectionViewCell {
   }
 
   func set(follower: Follower) {
+    accessibilityLabel = follower.login
     usernameLabel.text = follower.login
     avatarImageView.downloadImage(fromURL: follower.avatarUrl)
   }
 
   private func configure() {
+    isAccessibilityElement = true
     contentView.addSubviews(avatarImageView, usernameLabel)
 
     let padding: CGFloat = 8

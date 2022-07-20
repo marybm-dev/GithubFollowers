@@ -19,6 +19,7 @@ class GFItemInfoView: UIView {
 
   override init(frame: CGRect) {
     super.init(frame: frame)
+    isAccessibilityElement = true
     configure()
   }
 
@@ -69,5 +70,6 @@ class GFItemInfoView: UIView {
       titleLabel.text = "Followers"
     }
     countLabel.text = "\(count)"
+    accessibilityLabel = "\(count) \(titleLabel.text ?? "")"
   }
 }

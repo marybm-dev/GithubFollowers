@@ -18,6 +18,8 @@ class GFUserInfoHeaderVC: UIViewController {
 
   var user: User!
 
+  var a11yLabelsElement: UIAccessibilityElement?
+
   init(user: User) {
     super.init(nibName: nil, bundle: nil)
     self.user = user
@@ -32,6 +34,16 @@ class GFUserInfoHeaderVC: UIViewController {
     view.addSubviews(avatarImageView, usernameLabel, nameLabel, locationImageView, locationLabel, bioLabel)
     layoutUI()
     configure()
+    configureA11y()
+  }
+
+  override func viewDidLayoutSubviews() {
+    super.viewDidLayoutSubviews()
+
+    a11yLabelsElement?.accessibilityFrameInContainerSpace = avatarImageView.frame
+      .union(usernameLabel.frame)
+      .union(nameLabel.frame)
+      .union(locationLabel.frame)
   }
 
   func configure() {
@@ -44,6 +56,13 @@ class GFUserInfoHeaderVC: UIViewController {
 
     locationImageView.image = SFSymbols.location
     locationImageView.tintColor = .secondaryLabel
+  }
+
+  func configureA11y() {
+    let labelsElement = UIAccessibilityElement(accessibilityContainer: self)
+    labelsElement.accessibilityLabel = [usernameLabel.text, nameLabel.text, locationLabel.text].compactMap{$0}.joined(separator: ", ")
+    view.accessibilityElements = [labelsElement, bioLabel]
+    a11yLabelsElement = labelsElement
   }
 
   func layoutUI() {
